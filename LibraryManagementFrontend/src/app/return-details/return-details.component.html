@@ -1,0 +1,31 @@
+<h1 style="text-align: center;">Return Status Details</h1>
+
+<hr/>
+<div *ngIf = "returnStatus" style="width: 700px;margin-left: auto;
+text-align: justify;text-justify: inter-word; font-size: large;">
+    <div>
+        <label><b>Return Id : </b></label> {{returnStatus.return_id}}
+    </div>
+
+    <div>
+        <label><b>Return Book Name : </b></label> {{returnStatus.returnBookName}}
+    </div>
+
+    <div>
+        <label><b>Return Customer Id: </b></label> {{returnStatus.return_cust}}
+    </div>
+
+    <div>
+        <label><b>Return Date : </b></label> {{returnStatus.returnDate}}
+    </div>
+
+    <div>
+        <label><b>Isbn Book 2: </b>{{returnStatus.isbnBook2}}</label>
+    </div>
+</div>
+
+<br>
+<br>
+<div style="text-align: center;">
+<button (click)="list()" class="btn btn-primary">Back to Return List</button><br></div>
+

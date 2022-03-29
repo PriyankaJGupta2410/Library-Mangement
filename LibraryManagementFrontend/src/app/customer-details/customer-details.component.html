@@ -1,0 +1,26 @@
+<h1 style="text-align: center;">Customer Details</h1>
+
+<hr/>
+<div *ngIf = "customer"style="width: 700px;margin-left: auto;
+text-align: justify;text-justify: inter-word; font-size: large;">
+    <div>
+        <label><b>Customer Id : </b></label> {{customer.customer_id}}
+    </div>
+
+    <div>
+        <label><b>Customer Address: </b></label> {{customer.customerAddress}}
+    </div>
+
+    <div>
+        <label><b>Customer Name: </b></label> {{customer.customerName}}
+    </div>
+
+    <div>
+        <label><b>Registration Date : </b></label> {{customer.registrationDate}}
+    </div>
+</div>
+
+<br>
+<br>
+<div style="text-align: center;">
+<button (click)="list()" class="btn btn-primary">Back to Customer List</button><br></div>

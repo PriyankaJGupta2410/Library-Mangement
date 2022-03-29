@@ -34,8 +34,8 @@ public class CustomerService {
         return "Customer Removed !!" +customer_id;
     }
 
-    public Customer updateCustomer(Customer customer){
-        Customer existingCustomer = customerRepository.findById(customer.getCustomer_id()).orElse(null);
+    public Customer updateCustomer(int customer_id,Customer customer){
+        Customer existingCustomer = customerRepository.findById(customer_id).orElse(null);
         existingCustomer.setCustomerName(customer.getCustomerName());
         existingCustomer.setCustomerAddress(customer.getCustomerAddress());
         existingCustomer.setRegistrationDate(customer.getRegistrationDate());

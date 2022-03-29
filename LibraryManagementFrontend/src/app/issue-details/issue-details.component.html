@@ -1,0 +1,31 @@
+<h1 style="text-align: center;">Issue Status Details</h1>
+
+<hr/>
+<div *ngIf = "issueStatus" style="width: 700px;margin-left: auto;
+text-align: justify;text-justify: inter-word; font-size: large;">
+    <div>
+        <label><b>Issue Id : </b></label> {{issueStatus.issue_id}}
+    </div>
+
+    <div>
+        <label><b>Issue Book Name : </b></label> {{issueStatus.issueBookName}}
+    </div>
+
+    <div>
+        <label><b>Issue Customer Id: </b></label> {{issueStatus.issue_cust}}
+    </div>
+
+    <div>
+        <label><b>Issue Date : </b></label> {{issueStatus.issueDate}}
+    </div>
+
+    <div>
+        <label><b>Isbn Book : </b>{{issueStatus.isbn_book}}</label>
+    </div>
+</div>
+
+<br>
+<br>
+<div style="text-align: center;">
+<button (click)="list()" class="btn btn-primary">Back to Customer List</button><br></div>
+

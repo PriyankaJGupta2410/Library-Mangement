@@ -1,0 +1,29 @@
+<h2 style="text-align: center;">Update Return Status</h2>
+<div style="width: 500px; margin-left: auto; margin-right: auto;">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for = "name">Return Book Name</label>
+            <input type="text" class="form-control" id="returnBookName" 
+            required [(ngModel)]="returnStatus.returnBookName" name="returnBookName">
+        </div>
+        <div class="form-group">
+            <label for="name">Return Customer Id</label>
+            <input type="text" class="form-control" id="return_cust" 
+            required [(ngModel)]="returnStatus.return_cust" name="return_cust">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Return Date</label>
+            <input type="date" class="form-control" id="returnDate" 
+            required [(ngModel)]="returnStatus.returnDate" name="returnDate">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Isbn Book 2</label>
+            <input type="number" class="form-control" id="isbnBook2" 
+            required [(ngModel)]="returnStatus.isbnBook2" name="isbnBook2">
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>

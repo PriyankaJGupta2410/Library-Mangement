@@ -1,0 +1,28 @@
+<mat-nav-list>
+    <div class="logo py-4">
+      <img src="./assets/logo.jpg" alt="Library Logo" height="200" width="220" />
+    </div>
+    <mat-divider></mat-divider>
+    <h2 matSubheader class="mt-2">APPLICATIONS</h2>
+  
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/home">
+      <mat-icon>home</mat-icon> Home
+    </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard">
+      <mat-icon>dashboard</mat-icon> Dashboard
+    </a>
+    <div class="scroll">
+    <a mat-list-item routerLink="books" class="nav-link" routerLinkActive="active"> <mat-icon>edit</mat-icon>Books List</a>
+    <a mat-list-item routerLink="AddBook" class="nav-link" routerLinkActive="active"> <mat-icon>edit</mat-icon>Add Books</a>
+    <a mat-list-item routerLink="branch" class="nav-link" routerLinkActive = "active"> <mat-icon>edit</mat-icon>Branch List</a>
+    <a mat-list-item routerLink="AddBranch" class="nav-link" routerLinkActive="active"> <mat-icon>edit</mat-icon>Add Branch</a>
+    <a mat-list-item routerLink="customer" class="nav-link" routerLinkActive="active"> <mat-icon>edit</mat-icon>Customer List</a>
+    <a mat-list-item routerLink="AddCustomer" class="nav-link" routerLinkActive="active"> <mat-icon>edit</mat-icon>Add Customer</a>
+    <a mat-list-item routerLink="employee" class="nav-link" routerLinkActive="active"> <mat-icon>edit</mat-icon>Employee List</a>
+    <a mat-list-item routerLink="AddEmployee" class="nav-link" routerLinkActive="active"> <mat-icon>edit</mat-icon>Add Employee</a>
+    <a mat-list-item routerLink="issueStatus" class="nav-link" routerLinkActive="active"><mat-icon>edit</mat-icon>Issue Status List</a>
+    <a mat-list-item routerLink="AddIssue" class="nav-link" routerLinkActive="active"><mat-icon>edit</mat-icon>Add Issue Status</a>
+    <a mat-list-item routerLink="returnStatus" class="nav-link" routerLinkActive="active"><mat-icon>edit</mat-icon>Return Status List</a>
+    <a mat-list-item routerLink="AddReturn" class="nav-link" routerLinkActive="active"><mat-icon>edit</mat-icon>Add Return Status</a>
+    </div>
+  </mat-nav-list>

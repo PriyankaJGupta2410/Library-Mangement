@@ -1,0 +1,30 @@
+<h2 style="text-align: center;">Create Branch</h2>
+    <div [hidden]="submitted" style="width: 500px; margin-left: auto; margin-right: auto;">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="name">Branch No</label>
+          <input type="number" class="form-control" id="branch_no" required [(ngModel)]="branch.branch_no" name="branch_no">
+        </div>
+        <div class="form-group">
+          <label for="name">Manager Id</label>
+          <input type="number" class="form-control" id="managerId" required [(ngModel)]="branch.managerId" name="managerId"> 
+        </div>
+    
+        <div class="form-group">
+          <label for="name">Branch Address</label>
+          <input type="text" class="form-control" id="branchAddress" required [(ngModel)]="branch.branchAddress" name="branchAddress">
+        </div>
+    
+        <div class="form-group">
+          <label form="name">Contact No</label>
+          <input type="number" class="form-control" id="contactNo" required [(ngModel)]="branch.contactNo" name="contactNo">
+        </div>
+    
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+    
+    <div [hidden]="!submitted">
+      <h4>You submitted successfully!</h4>
+        <button class="btn btn-success" (click)="newBranch()">Add Branch</button>
+    </div>

@@ -1,0 +1,26 @@
+<h1 style = "text-align: center;">Branch Details</h1>
+
+<hr/>
+<div *ngIf = "branch" style="width: 700px;margin-left: auto;
+text-align: justify;text-justify: inter-word; font-size: large;">
+    <div>
+        <label><b>Branch No : </b></label> {{branch.branch_no}}
+    </div>
+
+    <div>
+        <label><b>Manager Id : </b></label> {{branch.managerId}}
+    </div>
+
+    <div>
+        <label><b>Branch Address : </b></label> {{branch.branchAddress}}
+    </div>
+
+    <div>
+        <label><b>Contact No : </b></label> {{branch.contactNo}}
+    </div>
+</div>
+
+<br>
+<br>
+<div style="text-align: center;">
+<button (click)="list()" class="btn btn-primary">Back to Branch List</button><br></div>

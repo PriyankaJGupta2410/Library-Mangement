@@ -2,7 +2,6 @@ package main.java.com.LibraryManagement.LibraryManagewebapp.service;
 
 import main.java.com.LibraryManagement.LibraryManagewebapp.entity.Return_status;
 import main.java.com.LibraryManagement.LibraryManagewebapp.repository.ReturnRepository;
-import net.bytebuddy.asm.Advice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,8 +34,8 @@ public class ReturnService {
         return "Return Status is Removed!!!"+return_id;
     }
 
-    public Return_status updateReturn(Return_status return_status){
-        Return_status existingReturn = returnRepository.findById(return_status.getReturn_id()).orElse(null);
+    public Return_status updateReturn(int return_id,Return_status return_status){
+        Return_status existingReturn = returnRepository.findById(return_id).orElse(null);
         existingReturn.setReturn_cust(return_status.getReturn_cust());
         existingReturn.setReturnBookName(return_status.getReturnBookName());
         existingReturn.setReturnDate(return_status.getReturnDate());

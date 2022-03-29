@@ -1,0 +1,35 @@
+<div class = "panel panel-primary">
+    <div class="panel-heading">
+        <h2 style="text-align: center;">Issue Status List</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Issue Id</th>
+                    <th>Issue Book Name</th>
+                    <th>Issue Customer Id</th>
+                    <th>Issue Book Date</th>
+                    <th>Isbn Book</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let issue of issueStatus | async">
+                    <td>{{issue.issue_id}}</td>
+                    <td>{{issue.issueBookName}}</td>
+                    <td>{{issue.issue_cust}}</td>
+                    <td>{{issue.issueDate}}</td>
+                    <td>{{issue.isbn_book}}</td>
+                    <td><button (click)="deleteIssue(issue.issue_id)"
+                        class="btn btn-danger">Delete</button>
+                        <button (click)="updateIssue(issue.issue_id)"
+                        class="btn btn-info" style="margin-left: 10px;">Update</button>
+                        <button (click)="issueDetails(issue.issue_id)"
+                        class="btn btn-info" style="margin-left: 10px;">Details</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

@@ -27,7 +27,7 @@ public class IssueController {
         return issueService.saveIssues(issue_statuses);
     }
 
-    @GetMapping("/")
+    @GetMapping()
     public List<Issue_status> findAllIssue(){
         return  issueService.getIssues();
     }
@@ -37,9 +37,9 @@ public class IssueController {
         return issueService.getIssueById(issue_id);
     }
 
-    @PutMapping("/update")
-    public Issue_status updateIssue(@RequestBody Issue_status issue_status){
-        return  issueService.updateIssue(issue_status);
+    @PutMapping("/update/{issue_id}")
+    public Issue_status updateIssue(@PathVariable int issue_id,@RequestBody Issue_status issue_status){
+        return  issueService.updateIssue(issue_id,issue_status);
     }
 
     @DeleteMapping("/delete/{issue_id}")

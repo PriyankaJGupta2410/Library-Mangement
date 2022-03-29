@@ -9,8 +9,6 @@ import javax.persistence.*;
 @Table(name = "employee")
 public class Employee {
 
-//    employee_id,employee_Name, position,salary
-
     @Id
     private int employee_id;
 

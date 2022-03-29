@@ -33,8 +33,8 @@ public class EmployeeService {
         return "Employee Removed !!!" +employee_id;
     }
 
-    public Employee updateEmployee(Employee employee){
-        Employee existingEmployee = employeeRepository.findById(employee.getEmployee_id()).orElse(null);
+    public Employee updateEmployee(int employee_id,Employee employee){
+        Employee existingEmployee = employeeRepository.findById(employee_id).orElse(null);
         existingEmployee.setEmployee_id(employee.getEmployee_id());
         existingEmployee.setEmployeeName(employee.getEmployeeName());
         existingEmployee.setPosition(employee.getPosition());

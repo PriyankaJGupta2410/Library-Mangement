@@ -1,0 +1,29 @@
+<h2 style="text-align: center;">Update Issue Status</h2>
+<div style="width: 500px; margin-left: auto; margin-right: auto;">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for = "name">Issue Book Name</label>
+            <input type="text" class="form-control" id="issueBookName" 
+            required [(ngModel)]="issueStatus.issueBookName" name="issueBookName">
+        </div>
+        <div class="form-group">
+            <label for="name">Issue Customer Id</label>
+            <input type="text" class="form-control" id="issue_cust" 
+            required [(ngModel)]="issueStatus.issue_cust" name="issue_cust">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Issue Date</label>
+            <input type="date" class="form-control" id="issueDate" 
+            required [(ngModel)]="issueStatus.issueDate" name="issueDate">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Isbn Book</label>
+            <input type="number" class="form-control" id="isbn_book" 
+            required [(ngModel)]="issueStatus.isbn_book" name="isbn_book">
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>

@@ -27,7 +27,7 @@ public class CustomerController {
         return customerService.saveCustomers(customers);
     }
 
-    @GetMapping("/")
+    @GetMapping()
     public List<Customer> findAllCustomer(){
         return customerService.getCustomer();
     }
@@ -37,9 +37,9 @@ public class CustomerController {
         return customerService.getCustomerById(customer_id);
     }
 
-    @PutMapping("/update")
-    public Customer updateCustomer(@RequestBody Customer customer){
-        return customerService.updateCustomer(customer);
+    @PutMapping("/update/{customer_id}")
+    public Customer updateCustomer(@PathVariable int customer_id,@RequestBody Customer customer){
+        return customerService.updateCustomer(customer_id,customer);
     }
 
     @DeleteMapping("/delete/{customer_id}")

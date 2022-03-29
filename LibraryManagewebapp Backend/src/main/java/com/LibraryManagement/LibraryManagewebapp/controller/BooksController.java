@@ -28,7 +28,7 @@ public class BooksController {
         return bookService.saveBooks(books);
     }
 
-    @GetMapping("/")
+    @GetMapping()
     public List<Books> findAllBooks(){
         return bookService.getBooks();
     }
@@ -38,9 +38,9 @@ public class BooksController {
         return bookService.getBooksById(ISBN);
     }
 
-    @PutMapping("/update")
-    public Books updateBooks(@RequestBody Books books){
-        return bookService.updateBooks(books);
+    @PutMapping("/update/{ISBN}")
+    public Books updateById(@PathVariable int ISBN, @RequestBody Books books){
+        return bookService.updateBooksById(ISBN, books);
     }
 
     @DeleteMapping("/delete/{ISBN}")

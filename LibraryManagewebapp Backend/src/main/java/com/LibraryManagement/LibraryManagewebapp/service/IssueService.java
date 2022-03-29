@@ -31,11 +31,11 @@ public class IssueService {
 
     public String deleteIssue(int issue_id){
         issueRepository.deleteById(issue_id);
-        return "Issued Removed!!!!" +issue_id;
+        return "Issued id is Removed!!!!" +issue_id;
     }
 
-    public Issue_status updateIssue(Issue_status issue_status){
-        Issue_status existingIssue = issueRepository.findById(issue_status.getIssue_id()).orElse(null);
+    public Issue_status updateIssue(int issue_id,Issue_status issue_status){
+        Issue_status existingIssue = issueRepository.findById(issue_id).orElse(null);
         existingIssue.setIssue_cust(issue_status.getIssue_cust());
         existingIssue.setIssueBookName(issue_status.getIssueBookName());
         existingIssue.setIssueDate(issue_status.getIssueDate());

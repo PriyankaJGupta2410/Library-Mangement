@@ -1,0 +1,26 @@
+<h1 style="text-align: center;">Employee Details</h1>
+
+<hr/>
+<div *ngIf = "employee"style="width: 700px;margin-left: auto;
+text-align: justify;text-justify: inter-word; font-size: large;">
+    <div>
+        <label><b>Employee Id : </b></label> {{employee.employee_id}}
+    </div>
+
+    <div>
+        <label><b>Employee Name: </b></label> {{employee.employeeName}}
+    </div>
+
+    <div>
+        <label><b>Position : </b></label> {{employee.position}}
+    </div>
+
+    <div>
+        <label><b>Salary : </b></label> {{employee.salary}}
+    </div>
+</div>
+
+<br>
+<br>
+<div style="text-align: center;">
+<button (click)="list()" class="btn btn-primary">Back to Employee List</button><br></div>

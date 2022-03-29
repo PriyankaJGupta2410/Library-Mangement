@@ -1,0 +1,38 @@
+<h2 style="text-align: center;">Books Details</h2>
+
+<hr/>
+<div *ngIf = "books" style="width: 700px;margin-left: auto;
+text-align: justify;text-justify: inter-word; font-size: large;">
+    <div>
+        <label><b>ISBN : </b></label> {{books.isbn}}
+    </div>
+
+    <div>
+        <label><b>Book Title : </b></label> {{books.bookTitle}}
+    </div>
+
+    <div>
+        <label><b>Rental Price : </b></label> {{books.rentalPrice}}
+    </div>
+
+    <div>
+        <label><b>Status : </b></label> {{books.status}}
+    </div>
+
+    <div>
+        <label><b>Author : </b></label> {{books.author}}
+    </div>
+
+    <div>
+        <label><b>Category : </b></label> {{books.category}}
+    </div>
+
+    <div>
+        <label><b>Publisher : </b></label> {{books.publisher}}
+    </div>
+</div>
+
+<br>
+<br>
+<div style="text-align: center;">
+<button (click)="list()" class="btn btn-primary" >Back to Books List</button><br></div>

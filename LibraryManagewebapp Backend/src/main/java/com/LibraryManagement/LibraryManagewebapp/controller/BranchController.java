@@ -28,7 +28,7 @@ public class BranchController {
         return branchService.saveBranches(branches);
     }
 
-    @GetMapping("/")
+    @GetMapping()
     public List<Branch> findAllBranch(){
         return branchService.getBranch();
     }
@@ -38,9 +38,9 @@ public class BranchController {
         return branchService.getBranchById(branch_no);
     }
 
-    @PutMapping("/update")
-    public Branch updateBranch(@RequestBody Branch branch){
-        return branchService.updateBranch(branch);
+    @PutMapping("/update/{branch_no}")
+    public Branch updateBranchById(@PathVariable int branch_no,@RequestBody Branch branch){
+        return branchService.updateBranchById(branch_no,branch);
     }
 
     @DeleteMapping("/delete/{branch_no}")

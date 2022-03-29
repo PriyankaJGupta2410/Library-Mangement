@@ -34,8 +34,8 @@ public class BookService{
         return "Books removed !!" +ISBN;
     }
 
-    public Books updateBooks(Books books){
-        Books existingBooks = booksRepository.findById(books.getISBN()).orElse(null);
+    public Books updateBooksById(int ISBN,Books books){
+        Books existingBooks = booksRepository.findById(ISBN).orElse(null);
         existingBooks.setBookTitle(books.getBookTitle());
         existingBooks.setCategory(books.getCategory());
         existingBooks.setRentalPrice(books.getRentalPrice());

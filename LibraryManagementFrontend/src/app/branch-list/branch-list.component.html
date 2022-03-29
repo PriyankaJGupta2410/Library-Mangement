@@ -1,0 +1,32 @@
+<div class = "panel panel-primary">
+    <div class="panel-heading">
+        <h2 style="text-align: center;">Branch List</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Branch No</th>
+                    <th>Manager Id</th>
+                    <th>Branch Address</th>
+                    <th>Contact No</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let br of branch | async">
+                    <td>{{br.branch_no}}</td>
+                    <td>{{br.managerId}}</td>
+                    <td>{{br.branchAddress}}</td>
+                    <td>{{br.contactNo}}</td>
+                    <td><button (click)="deleteBranch(br.branch_no)"
+                        class="btn btn-danger">Delete</button>
+                        <button (click)="updateBranch(br.branch_no)"
+                        class="btn btn-info" style="margin-left: 10px;">Update</button>
+                        <button (click)="branchDetails(br.branch_no)"
+                        class="btn btn-info" style="margin-left: 10px;">Details</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

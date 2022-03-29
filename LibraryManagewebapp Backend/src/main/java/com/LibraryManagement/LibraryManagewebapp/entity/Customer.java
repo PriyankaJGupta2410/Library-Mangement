@@ -2,11 +2,9 @@ package main.java.com.LibraryManagement.LibraryManagewebapp.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
-import org.hibernate.engine.internal.Cascade;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
 
 
 @Data

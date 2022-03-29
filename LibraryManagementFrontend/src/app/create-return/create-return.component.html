@@ -1,0 +1,36 @@
+<h2 style="text-align: center;">Create Return Status</h2>
+    <div [hidden]="submitted" style="width: 500px; margin-left: auto; margin-right: auto;">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="name">Return Id</label>
+          <input type="number" class="form-control" id="return_id" required [(ngModel)]="returnStatus.return_id" name="return_id" placeholder="Enter the return id">
+        </div>
+        <div class="form-group">
+          <label for="name">Return Book Name</label>
+          <input type="text" class="form-control" id="returnBookName" required [(ngModel)]="returnStatus.returnBookName" name="returnBookName" placeholder="Enter the Return Book Name "> 
+        </div>
+    
+        <div class="form-group">
+          <label for="name">Return Customer Id</label>
+          <input type="number" class="form-control" id="return_cust" required [(ngModel)]="returnStatus.return_cust" name="return_cust" placeholder="Enter the Return Book Customer Id">
+        </div>
+    
+        <div class="form-group">
+          <label form="name">Return Date</label>
+          <input type="date" class="form-control" id="returnDate" required [(ngModel)]="returnStatus.returnDate" name="returnDate" placeholder="Enter the Date of Return Book">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Isbn Book 2</label>
+            <input type="text" class="form-control" id="isbnBook2" required [(ngModel)]="returnStatus.isbnBook2" name="isbnBook2" placeholder="Enter the Isbn No. of return Book"> 
+          </div>
+    
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+    
+    <div [hidden]="!submitted">
+      <h4>You submitted successfully!</h4>
+        <button class="btn btn-success" (click)="newReturnStatus()">Add Return Status</button>
+    </div>
+

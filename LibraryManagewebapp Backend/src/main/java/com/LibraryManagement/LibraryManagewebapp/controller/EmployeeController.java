@@ -27,7 +27,7 @@ public class EmployeeController {
         return employeeService.saveEmployees(employees);
     }
 
-    @GetMapping("/")
+    @GetMapping()
     public List<Employee> findAllEmployee(){
         return employeeService.getEmployee();
     }
@@ -37,9 +37,9 @@ public class EmployeeController {
         return employeeService.getEmployeeById(employee_id);
     }
 
-    @PutMapping("/update")
-    public Employee updateEmployee(@RequestBody Employee employee){
-        return employeeService.updateEmployee(employee);
+    @PutMapping("/update/{employee_id}")
+    public Employee updateEmployee(@PathVariable int employee_id,@RequestBody Employee employee){
+        return employeeService.updateEmployee(employee_id,employee);
     }
 
     @DeleteMapping("/delete/{employee_id}")

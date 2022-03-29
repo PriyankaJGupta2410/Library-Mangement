@@ -1,0 +1,35 @@
+<div class = "panel panel-primary">
+    <div class="panel-heading">
+        <h2 style="text-align: center;">Issue Status List</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Return Id</th>
+                    <th>Return Book Name</th>
+                    <th>Return Customer Id</th>
+                    <th>Return Book Date</th>
+                    <th>Isbn Book 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let return of returnStatus | async">
+                    <td>{{return.return_id}}</td>
+                    <td>{{return.returnBookName}}</td>
+                    <td>{{return.return_cust}}</td>
+                    <td>{{return.returnDate}}</td>
+                    <td>{{return.isbnBook2}}</td>
+                    <td><button (click)="deleteReturn(return.return_id)"
+                        class="btn btn-danger">Delete</button>
+                        <button (click)="updateReturn(return.return_id)"
+                        class="btn btn-info" style="margin-left: 10px;">Update</button>
+                        <button (click)="returnDetails(return.return_id)"
+                        class="btn btn-info" style="margin-left: 10px;">Details</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

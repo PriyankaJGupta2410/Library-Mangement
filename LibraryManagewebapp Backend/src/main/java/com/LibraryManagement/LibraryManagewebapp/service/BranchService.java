@@ -35,8 +35,8 @@ public class BranchService{
         return "Branch removed !!" +branch_no;
     }
 
-    public Branch updateBranch(Branch branch){
-        Branch existingBranch = branchRepository.findById(branch.getBranch_no()).orElse(null);
+    public Branch updateBranchById(int branch_no,Branch branch){
+        Branch existingBranch = branchRepository.findById(branch_no).orElse(null);
         existingBranch.setManagerId(branch.getManagerId());
         existingBranch.setBranchAddress(branch.getBranchAddress());
         existingBranch.setContactNo(branch.getContactNo());

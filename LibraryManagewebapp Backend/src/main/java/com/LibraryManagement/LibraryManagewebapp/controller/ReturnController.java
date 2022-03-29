@@ -27,7 +27,7 @@ public class ReturnController {
         return  returnService.saveReturns(return_statuses);
     }
 
-    @GetMapping("/")
+    @GetMapping()
     public List<Return_status> findAllReturn(){
         return  returnService.getReturn();
     }
@@ -37,9 +37,9 @@ public class ReturnController {
         return  returnService.getReturnById(return_id);
     }
 
-    @PutMapping("/update")
-    public Return_status updateReturn(@RequestBody Return_status return_status){
-        return  returnService.updateReturn(return_status);
+    @PutMapping("/update/{return_id}")
+    public Return_status updateReturn(@PathVariable int return_id,@RequestBody Return_status return_status){
+        return  returnService.updateReturn(return_id,return_status);
     }
 
     @DeleteMapping("/delete/{return_id}")
